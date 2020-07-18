@@ -2,6 +2,8 @@
 function generateMarkdown(data) {
   return `# ${data.title}
 
+  ## Badge
+
   ## Description
   ${data.description}
 
