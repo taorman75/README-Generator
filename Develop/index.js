@@ -1,14 +1,22 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const path = require('path');
+
+const generateMarkdown = require("./utils/generateMarkdown")
 
 // array of questions for user
 const questions = [
-    inquirer.prompt([
+
         {
           type: "input",
-          message: "What is your GitHub name?", 
+          message: "What is your GitHub username?", 
           name: "username" 
+        },
+        {
+          type: "input",
+          message: "What is your email address?", 
+          name: "email" 
         },
         {
             type: "input",
@@ -47,11 +55,11 @@ const questions = [
           choices: ["x", "y", "z"]
         }
         
-      ])
+
 
 ];
 
-const markdownInfo = 
+/*const markdownInfo = 
 `# ${questions.name}
 
 ## Description
@@ -74,21 +82,26 @@ ${questions.testing}
 ${questions.badge}
 
 ## Questions
-Contact me at ${username} on GitHub`
+Contact me at ${questions.username} on GitHub`*/
 
-// // function to write README file
-// function writeToFile(fileName, data) {
-// }
-fs.writeFile("README.md", markdownInfo, function (err){
-  if (err) {
-    return console.log(err);
-  }
-  console.log("Successfully created README.md!");
-})
+// function to write README file
+function writeToFile(fileName, data) {
+// console.log(fileName, data);
+//  return fs.writeFile("README.md", markdownInfo, function (err){
+//     if (err) {
+//       return console.log(err);
+//     }
+//     console.log("Successfully created README.md!");
+//   })
+//path.join(process.cwd(), fileName)
+//`${process.cwd()}${fileName}`
+return fs.writeFileSync(path.join(process.cwd(), fileName), data)
+
+}
 // // function to initialize program
-// function init() {
+function init() {
+  inquirer.prompt(questions).then(data => writeToFile("README.md", generateMarkdown(data)));
+}
 
-// }
-
-// // function call to initialize program
-// init();
+// function call to initialize program
+init();
