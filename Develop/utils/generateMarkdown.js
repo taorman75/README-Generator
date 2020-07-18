@@ -14,7 +14,7 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## Licensing
-  ${data.badge} 
+  ${data.license} 
 
   ## Contribution
   ${data.contribution}

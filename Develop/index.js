@@ -50,9 +50,9 @@ const questions = [
           },
         {
           type: "list",
-          message: "Select the appropriate badge for your project:",
-          name: "badge",
-          choices: ["x", "y", "z"]
+          message: "Select the appropriate license for your project:",
+          name: "license",
+          choices: ["MIT", "ISC", "GNU GPLv3"]
         }
 
 ];
