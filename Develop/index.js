@@ -54,51 +54,18 @@ const questions = [
           name: "badge",
           choices: ["x", "y", "z"]
         }
-        
-
 
 ];
 
-/*const markdownInfo = 
-`# ${questions.name}
 
-## Description
-
-## Table of Contents
-
-## Installation
-${questions.installation}
-
-## Usage
-${questions.usage}
-
-## Contribution
-${questions.contribution}
-
-## Testing
-${questions.testing}
-
-## Badges
-${questions.badge}
-
-## Questions
-Contact me at ${questions.username} on GitHub`*/
 
 // function to write README file
 function writeToFile(fileName, data) {
-// console.log(fileName, data);
-//  return fs.writeFile("README.md", markdownInfo, function (err){
-//     if (err) {
-//       return console.log(err);
-//     }
-//     console.log("Successfully created README.md!");
-//   })
-//path.join(process.cwd(), fileName)
-//`${process.cwd()}${fileName}`
+
 return fs.writeFileSync(path.join(process.cwd(), fileName), data)
 
 }
-// // function to initialize program
+// function to initialize program
 function init() {
   inquirer.prompt(questions).then(data => writeToFile("README.md", generateMarkdown(data)));
 }
