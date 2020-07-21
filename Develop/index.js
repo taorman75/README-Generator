@@ -50,9 +50,9 @@ const questions = [
           },
         {
           type: "list",
-          message: "Select the appropriate license for your project:",
+          message: "Select the appropriate license for your project (use arrow keys).",
           name: "license",
-          choices: ["MIT", "ISC", "GNU GPLv3"]
+          choices: ["Apache 2.0", "MIT", "ISC", "GNU GPLv3", "None"]
         }
 
 ];
