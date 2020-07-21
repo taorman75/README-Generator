@@ -13,6 +13,7 @@ function generateMarkdown(data) {
   * [Questions](#questions)
 
   ## Badge
+  ${badge}
 
   ## Description
   ${data.description}
