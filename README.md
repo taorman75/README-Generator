@@ -29,7 +29,7 @@ At each prompt, type in your responses. The last prompt will allow you to - usin
 
 The generated README.md file will look like this (written in markdown language):
 
-![README questions screen shot](https://github.com/taorman75/README-Generator/blob/master/Develop/GeneratedREADME.jpg)
+![README final screen shot](https://github.com/taorman75/README-Generator/blob/master/Develop/GeneratedREADME.jpg)
 
 
 ## Questions
