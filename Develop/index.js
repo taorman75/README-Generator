@@ -57,23 +57,6 @@ const questions = [
 
 ];
 
-var apache = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
-var mit = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-var isc = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)";
-var gnu3 = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
-var badge = "";
-
-if (questions.license === "Apache 2.0") {
-  badge = apache;
-} else if (questions.license === "MIT") {
-  badge = mit;
-} else if (questions.license === "ISC") {
-  badge = isc;
-} else if (questions.license === "GNU GPLv3") {
-  badge = gnu3;
-} else {
-  badge = "";
-}
 
 // function to write README file
 function writeToFile(fileName, data) {
